@@ -43,11 +43,6 @@ func checkAndInstallCurl() error {
 	cmd.Stdout = os.Stdout
 	cmd.Stderr = os.Stderr
 
-	// 执行命令
-	err := cmd.Run()
-	if err != nil {
-		return fmt.Errorf("failed to install curl: %v", err)
-	}
-
-	return nil
+	// 执行命令并直接返回结果
+	return cmd.Run()
 }
