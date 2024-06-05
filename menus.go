@@ -109,6 +109,7 @@ func displayMenu(title string, options []menuOption) {
 		fmt.Printf("%d. %s\n", i, option.title)
 	}
 }
+
 func getUserChoice() int {
 	reader := bufio.NewReader(os.Stdin)
 	for {

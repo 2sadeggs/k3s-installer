@@ -1,7 +1,6 @@
 package main
 
 import (
-	"fmt"
 	"os"
 	"os/exec"
 )
@@ -15,10 +14,11 @@ func getPodStatus() error {
 	cmd.Stderr = os.Stderr
 
 	// 执行命令
-	err := cmd.Run()
-	if err != nil {
-		return fmt.Errorf("执行kubectl命令失败: %v", err)
-	}
-
-	return nil
+	//err := cmd.Run()
+	//if err != nil {
+	//	return fmt.Errorf("执行kubectl命令失败: %v", err)
+	//}
+	//
+	//return nil
+	return cmd.Run()
 }
