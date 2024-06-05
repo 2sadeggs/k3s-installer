@@ -80,7 +80,7 @@ func viewK3sSubNodeInstallCommand() error {
 // 测试公共网络连接性
 func testPublicNetworkConnectivity() error {
 	fmt.Println("正在测试公共网络连接性...")
-	if isInternetReachable() {
+	if isInternetReachable("http://www.baidu.com") {
 		fmt.Println(color.GreenString("OK 公共网络连接性: 可以访问互联网"))
 		return nil
 	} else {

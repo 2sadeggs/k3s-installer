@@ -58,9 +58,10 @@ func k3sInstall(installURL string, envArgs, cmdArgs []string) error {
 
 	fmt.Println("Starting to execute K3s install script...")
 
-	if err := cmd.Run(); err != nil {
-		return err
-	}
-
-	return nil
+	//if err := cmd.Run(); err != nil {
+	//	return err
+	//}
+	//
+	//return nil
+	return cmd.Run()
 }

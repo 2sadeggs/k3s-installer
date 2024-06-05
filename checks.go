@@ -110,7 +110,7 @@ func getLinuxFirewallCmd() (string, error) {
 func checkInternet() error {
 	//fmt.Println("检查互联网连接...")
 
-	if isInternetReachable() {
+	if isInternetReachable("http://www.baidu.com") {
 		return nil // 成功连接到互联网
 	} else {
 		return fmt.Errorf("无法连接到互联网")
