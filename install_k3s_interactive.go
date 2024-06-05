@@ -70,11 +70,7 @@ func k3sInstallInteractive() error {
 	cmdArgs := strings.Split(otherCmdArgs, ",")
 
 	// 执行安装
-	if err := k3sInstall(installURL, envArgs, cmdArgs); err != nil {
-		return err
-	}
-
-	return nil
+	return k3sInstall(installURL, envArgs, cmdArgs)
 }
 
 // 选择安装源
