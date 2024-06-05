@@ -38,10 +38,5 @@ func installComponent(componentName string) error {
 	cmd.Stdout = os.Stdout
 	cmd.Stderr = os.Stderr
 
-	err = cmd.Run()
-	if err != nil {
-		return fmt.Errorf("安装%s错误: %v", componentName, err)
-	}
-
-	return nil
+	return cmd.Run()
 }
